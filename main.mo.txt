@@ -1,0 +1,39 @@
+
+actor hesap_mak{
+
+  var hucre:Int=0;
+  //yapısal olarak erşim func (fonk olduğunu belirttik) parametre dondurdugu deger
+
+  public func toplama (s:Int): async Int {
+
+    hucre+=s;
+    hucre
+  };
+
+  public func cikarma(s:Int) : async Int{
+
+    hucre-=s;
+    hucre
+  };
+  public func carpma(s:Int) : async Int{
+
+    hucre*=s;
+    hucre
+  };
+
+  public func bolme(s:Int) : async ?Int{    //Int ın basındaki soru isareti float veya 0 da olsa sonucun dondueulmesini saglamak icin
+  if(s==0){
+    null}
+    else{
+    hucre/=s;
+    ?hucre
+
+    }
+  };
+
+  //temizle
+  public func temizle() :async (){
+    hucre:=0;
+  };
+    
+  };
